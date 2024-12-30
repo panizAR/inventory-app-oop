@@ -1,24 +1,44 @@
 import Storage from "./Storage.js";
 
-const title = document.querySelector("#category-title");
-const description = document.querySelector("#category-description");
+const categoryTitle = document.querySelector("#category-title");
+const categoryDescription = document.querySelector("#category-description");
 const addNewCategory = document.querySelector("#add-new-category");
 const btnCancel = document.querySelector(".btn-cancel");
 
-export default class CategoryView {
+class CategoryView {
   constructor() {
     addNewCategory.addEventListener("click", (e) => this.addNewCategory(e));
-    this.Categoriees = [];
+    this.Categories = [];
   }
   addNewCategory(e) {
     e.preventDefault();
-    const title = title.value;
-    const description = description.value;
+    const title = categoryTitle.value;
+    const description = categoryDescription.value;
     if (!title || !description) return;
     Storage.saveCategory({ title, description });
-    this.Categoriees = Storage.getAllCategories();
+    this.Categories = Storage.getAllCategories();
 
     // update DOM : Update select option
-    
+    this.createCatedoriesList();
+    categoryDescription.value = "";
+    categoryTitle.value = "";
+  }
+  setApp() {
+    this.Categories = Storage.getAllCategories();
+  }
+  createCatedoriesList() {
+    let result = `<option value="" class="bg-slate-500 text-slate-300">
+      select a category
+    </option>`;
+
+    this.Categories.forEach((e) => {
+      result += `<option value=${e.id} class="bg-slate-500 text-slate-300">
+     ${e.title}
+    </option>`;
+    });
+
+    const categoryDOM = document.querySelector("#product-category");
+    categoryDOM.innerHTML = result;
   }
 }
+export default new CategoryView();

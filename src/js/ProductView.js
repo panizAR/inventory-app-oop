@@ -1,1 +1,6 @@
-class ProductView {}
+class ProductView {
+  constructor(){
+    
+  }
+}
+export default new ProductView();

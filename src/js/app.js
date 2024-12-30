@@ -8,4 +8,14 @@
 //     → ProductView Class
 //     → CategoryView Class
 //     → Main and App Class
-class App {}
+
+import CategoryView from "./CategoryView.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  //setApp => categoey : ok
+  CategoryView.setApp();
+  console.log(CategoryView);
+
+  //   create categories option
+  CategoryView.createCatedoriesList();
+});
