@@ -14,6 +14,7 @@ class CategoryView {
     e.preventDefault();
     const title = categoryTitle.value;
     const description = categoryDescription.value;
+    
     if (!title || !description) return;
     Storage.saveCategory({ title, description });
     this.Categories = Storage.getAllCategories();
