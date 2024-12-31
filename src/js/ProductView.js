@@ -46,7 +46,7 @@ class ProductView {
       const selectedCategory = Storage.getAllCategories().find(
         (c) => c.id == e.Category
       );
-      result += `<div class="product-list flex justify-between items-center mb-2">
+      result += `<div class="product-list flex justify-between items-center mb-2 gap-2">
               <span class="text-slate-400">${e.title}</span>
               <div class="flex justify-center items-center gap-2">
                 <span class="text-slate-400 text-sm block">${new Date(
