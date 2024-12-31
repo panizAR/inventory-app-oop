@@ -22,5 +22,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //   create categories option
   CategoryView.createCatedoriesList();
-  ProductView.createProductsList();
+  ProductView.createProductsList(ProductView.products);
 });
