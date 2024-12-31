@@ -23,8 +23,15 @@ class ProductView {
 
     if (!title || !quantity || !Category) return;
     Storage.saveProducts({ title, quantity, Category });
+
     this.products = Storage.getAllProducts();
+
     this.createProductsList(this.products);
+
+    // title.value = "";
+    // quantity.value = "";
+    // Category.value = "";
+
     console.log(this.products);
   }
 

@@ -23,55 +23,63 @@
 
       <div class="container max-w-screen-sm mx-auto">
         <!-- category -->
-        <div class="mb-6">
-          <h2 class="text-xl text-slate-300 font-bold capitalize mb-2">
-            add new category
-          </h2>
+        <section>
+          <div class="mb-6 hidden" id="category-wrapper">
+            <h2 class="text-xl text-slate-300 font-bold capitalize mb-2">
+              add new category
+            </h2>
 
-          <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4">
-            <div>
-              <label for="category-title" class="block mb-1 text-slate-400"
-                >title</label
-              >
-              <input
-                type="text"
-                name="category-title"
-                id="category-title"
-                placeholder="title"
-                class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"
-              />
-            </div>
+            <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4">
+              <div>
+                <label for="category-title" class="block mb-1 text-slate-400"
+                  >title</label
+                >
+                <input
+                  type="text"
+                  name="category-title"
+                  id="category-title"
+                  placeholder="title"
+                  class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"
+                />
+              </div>
 
-            <div>
-              <label
-                for="category-description"
-                class="block mb-1 text-slate-400"
-                >description</label
-              >
-              <textarea
-                name="category-description"
-                id="category-description"
-                class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"
-              ></textarea>
-            </div>
+              <div>
+                <label
+                  for="category-description"
+                  class="block mb-1 text-slate-400"
+                  >description</label
+                >
+                <textarea
+                  name="category-description"
+                  id="category-description"
+                  class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"
+                ></textarea>
+              </div>
 
-            <div class="flex justify-between items-center gap-x-4">
-              <button
-                class="flex-1 border border-slate-400 text-slate-300 rounded-xl py-2 btn-cancel"
-              >
-                cancel
-              </button>
-              <button
-                class="flex-1 bg-slate-500 text-slate-200 rounded-xl py-2"
-                id="add-new-category"
-              >
-                Add New category
-              </button>
-            </div>
-          </form>
-        </div>
+              <div class="flex justify-between items-center gap-x-4">
+                <button
+                  class="flex-1 border border-slate-400 text-slate-300 rounded-xl py-2 btn-cancel"
+                >
+                  cancel
+                </button>
+                <button
+                  class="flex-1 bg-slate-500 text-slate-200 rounded-xl py-2"
+                  id="add-new-category"
+                >
+                  Add New category
+                </button>
+              </div>
+            </form>
+          </div>
+          <button
+            class="capitalize text-slate-600 text-left mb-4 font-medium"
+            id="toggle-add-category"
+          >
+            Add new category?
+          </button>
+        </section>
 
-        <!-- product -->
+        <!-- product form-->
         <div class="mb-6">
           <h2 class="text-xl text-slate-300 font-bold capitalize mb-2">
             add new product
