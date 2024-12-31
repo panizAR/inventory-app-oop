@@ -29,9 +29,9 @@ class ProductView {
 
     this.createProductsList(this.products);
 
-    // title.value = "";
-    // quantity.value = "";
-    // Category.value = "";
+    productTitle.value = "";
+    productQuantity.value = "";
+    productCategory.value = "";
 
     console.log(this.products);
   }
